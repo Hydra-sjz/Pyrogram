@@ -1,4 +1,7 @@
 pyrogram
+python-dotenv
+asyncio
+requests
 
 Flask==2.2.2
 gunicorn==20.1.0
