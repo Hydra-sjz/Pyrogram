@@ -24,7 +24,7 @@ async def start_txt(client, message):
 @Client.on_message(filter.reggex("Start 😘"))
 async def start_myr(client, message):
     await message.reply_text(
-        rext="Start", 
+        text="Start", 
     ) 
 
 @Client.on_message(filter.reggex("Close ❌"))
