@@ -1,4 +1,4 @@
-from pyrogram.types import ReplyKeyboardMarkup
+from pyrogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from pyrogram import Client, filters
 
 
@@ -10,9 +10,11 @@ async def start_txt(client, message):
             [[
                 "Start 😘", " Help😌", "About 🥲"
             ],[
+                "🎵 Music Galaxy 🎵"
+            ],[
                 "YouTube 🔴", " Spotify 🟢", "Deezer 🟣"
             ],[
-                "🎵 Music Galaxy 🎵"
+                "Close ❌"
             ]]
             resize_keyboard=True, 
         ) 
@@ -25,9 +27,11 @@ async def start_myr(client, message):
         rext="Start", 
     ) 
 
-
-@Client.on_message(filter.reggex("Start 😘"))
-async def start_myr(client, message):
+@Client.on_message(filter.reggex("Close ❌"))
+async def close_myr(client, message):
     await message.reply_text(
-        rext="Start", 
+        text="Botton Close", 
+        reply_markup=ReplyKeyboardRemove() 
     ) 
+        
+        
