@@ -16,7 +16,7 @@ async def start_txt(client, message):
             ],[
                 "Close ❌"
             ]]
-            resize_keyboard=True, 
+            resize_keyboard=True
         ) 
     ) 
 
