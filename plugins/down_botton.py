@@ -8,7 +8,26 @@ async def start_txt(client, message):
         text="Hi Bro how are U", 
         reply_markup=ReplyKeyboardMarkup(
             [[
-                "Start 😘"
+                "Start 😘", " Help😌", "About 🥲"
+            ],[
+                "YouTube 🔴", " Spotify 🟢", "Deezer 🟣"
+            ],[
+                "🎵 Music Galaxy 🎵"
             ]]
+            resize_keyboard=True, 
         ) 
+    ) 
+
+
+@Client.on_message(filter.reggex("Start 😘"))
+async def start_myr(client, message):
+    await message.reply_text(
+        rext="Start", 
+    ) 
+
+
+@Client.on_message(filter.reggex("Start 😘"))
+async def start_myr(client, message):
+    await message.reply_text(
+        rext="Start", 
     ) 
