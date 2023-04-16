@@ -21,13 +21,13 @@ async def start_txt(client, message):
     ) 
 
 
-@Client.on_message(filter.reggex("Start 😘"))
+@Client.on_message(filter.regex("Start 😘"))
 async def start_myr(client, message):
     await message.reply_text(
         text="Start", 
     ) 
 
-@Client.on_message(filter.reggex("Close ❌"))
+@Client.on_message(filter.regex("Close ❌"))
 async def close_myr(client, message):
     await message.reply_text(
         text="Botton Close", 
