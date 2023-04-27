@@ -2,36 +2,31 @@ from pyrogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from pyrogram import Client, filters
 
 
-@Client.on_message(filters.command("start")) 
-async def start_txt(client, message):
+
+@Client.on_message(filters.command("replyremov")) 
+async def reply_rmv(client, message):
     await message.reply_text(
-        text="Hi Bro how are U", 
+        text="Click Down Botton to KeyboardRemove", 
         reply_markup=ReplyKeyboardMarkup(
             [[
-                "Start 😘", " Help😌", "About 🥲"
+                "♣️Music🎵Galaxy♣️" 
             ],[
-                "🎵 Music Galaxy 🎵"
-            ],[
-                "YouTube 🔴", " Spotify 🟢", "Deezer 🟣"
-            ],[
-                "Close ❌"
-            ]]
+                "➡️➡️➡️", "❌ CLOSE ❌", "⬅️⬅️⬅️"
+            ]], 
             resize_keyboard=True
         ) 
     ) 
 
 
-@Client.on_message(filter.regex("Start 😘"))
-async def start_myr(client, message):
+@Client.on_message(filters.regex("♣️Music🎵Galaxy♣️"))
+async def mg_myr(client, message):
     await message.reply_text(
-        text="Start", 
+        text="https://t.me/songdownload_group", 
     ) 
 
-@Client.on_message(filter.regex("Close ❌"))
+@Client.on_message(filters.regex("❌ CLOSE ❌"))
 async def close_myr(client, message):
     await message.reply_text(
         text="Botton Close", 
         reply_markup=ReplyKeyboardRemove() 
     ) 
-        
-        
